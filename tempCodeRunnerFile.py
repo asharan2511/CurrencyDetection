@@ -1,0 +1,5 @@
+test_img = cv2.imread("test.jpg")
+(kp1, des1) = sift.detectAndCompute(test_img, None)
+gray1 = cv2.cvtColor(test_img, cv2.COLOR_BGR2GRAY)
+img_1 = cv2.drawKeypoints(gray1, kp1, test_img)
+plt.imshow(img_1)
